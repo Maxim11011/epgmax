@@ -30,7 +30,10 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y jq
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Run mkepg.sh
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+           bash mkepg.sh > epgm.xml
+
+      - name: Archive epgm.xml
+        run: gzip -f epgm.xml
+
