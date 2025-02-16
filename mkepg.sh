@@ -7,7 +7,7 @@ else
 	echo "File for channels does not exist, creating...";
 for f in ./*.json; do 
 echo "Processing $f file for channel..."; 
-jq -r -f chan.jq $f >> channels.xml
+jq -r -f channels.jq $f >> channels.xml
 done
 fi
  
