@@ -24,5 +24,4 @@ echo '<tv generator-info-name="Vladimir">' >> epgm.xml
 cat channels.xml >> epgm.xml
 cat prog.xml >> epgm.xml
 echo '</tv>' >> epgm.xml
-echo "Job done!"
 
