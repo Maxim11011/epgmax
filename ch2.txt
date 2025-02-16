@@ -1,3 +1,4 @@
 https://epg.iptvx.one/api/id/novy-mir.json
 https://epg.iptvx.one/api/id/tv3-by.json
+https://epg.iptvx.one/api/id/yo.json
 
