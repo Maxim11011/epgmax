@@ -42,7 +42,6 @@ jobs:
       - name: Commit and push changes
         run: |
          git config user.name github-actions
-         git config user.email sergemorris1712@gmail.com
          git add epgm.xml.gz
          git commit -m "Convert JSON to XMLTV and archive"
          git push
