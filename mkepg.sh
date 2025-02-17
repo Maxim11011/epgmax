@@ -18,10 +18,10 @@ for f in ./*.json; do
 echo "Processing $f file for programme..."; 
 jq -r -f prog.jq $f | awk -f prog.awk >> prog.xml
 done
-echo '<?xml version="1.0" encoding="utf-8" ?>' > epgm.xml
-echo '<!DOCTYPE tv SYSTEM "xmltv.dtd">' >> epgm.xml 
-echo '<tv generator-info-name="Vladimir">' >> epgm.xml
-cat channels.xml >> epgm.xml
-cat prog.xml >> epgm.xml
-echo '</tv>' >> epgm.xml
+echo '<?xml version="1.0" encoding="utf-8" ?>' > epg.xml
+echo '<!DOCTYPE tv SYSTEM "xmltv.dtd">' >> epg.xml 
+echo '<tv generator-info-name="Vladimir">' >> epg.xml
+cat channels.xml >> epg.xml
+cat prog.xml >> epg.xml
+echo '</tv>' >> epg.xml
 
