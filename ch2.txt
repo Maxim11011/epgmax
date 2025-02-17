@@ -3,4 +3,4 @@ https://epg.iptvx.one/api/id/tv3-by.json
 https://epg.iptvx.one/api/id/yo.json
 https://epg.iptvx.one/api/id/sony-enter.json
 https://epg.iptvx.one/api/id/sony-turbo-baltic.json
-
+https://epg.iptvx.one/api/id/filmzone-ee.json
