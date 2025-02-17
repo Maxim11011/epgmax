@@ -34,14 +34,14 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run mkepg.sh
         run: |
-           bash mkepg.sh > epgm.xml
+           bash mkepg.sh > epg.xml
 
-      - name: Archive epgm.xml
-        run: gzip -f epgm.xml
+      - name: Archive epg.xml
+        run: gzip -f epg.xml
 
       - name: Commit and push changes
         run: |
          git config user.name github-actions
-         git add epgm.xml.gz
+         git add epg.xml.gz
          git commit -m "Convert JSON to XMLTV and archive"
          git push
