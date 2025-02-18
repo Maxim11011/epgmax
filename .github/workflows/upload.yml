@@ -16,6 +16,6 @@ jobs:
     - name: Upload file to Dropbox
       uses: intersecato/dropbox-upload@1.0.0
       with:
-        file: epg.xml.gz
-        dropbox_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
-        target: /epg/epg.xml.gz
+        DROPBOX_ACCESS_TOKEN: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
+        DROPBOX_DESTINATION_PATH_PREFIX: "epg"
+        GLOB: "epg.xml.gz"
