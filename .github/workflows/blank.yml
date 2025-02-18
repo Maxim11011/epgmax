@@ -46,10 +46,3 @@ jobs:
          git add epg.xml.gz
          git commit -m "Convert JSON to XMLTV and archive"
          git push
-      # Upload to Dropbox
-      - name: Upload file to Dropbox
-        uses: svenstaro/upload-release-action@v0.1.0
-         with:
-          file: epg.xml.gz
-          dropbox_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
-          target: /epg/epg.xml.gz
