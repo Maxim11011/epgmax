@@ -5,3 +5,5 @@ https://epg.iptvx.one/api/id/sony-enter.json
 https://epg.iptvx.one/api/id/sony-turbo-baltic.json
 https://epg.iptvx.one/api/id/filmzone-ee.json
 https://epg.iptvx.one/api/id/eroluxe-gays.json
+https://epg.iptvx.one/api/id/zal-12-tricolor.json
+https://epg.iptvx.one/api/id/zal-11-tricolor.json
