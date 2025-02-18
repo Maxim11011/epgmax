@@ -5,15 +5,3 @@ https://epg.iptvx.one/api/id/sony-enter.json
 https://epg.iptvx.one/api/id/sony-turbo-baltic.json
 https://epg.iptvx.one/api/id/filmzone-ee.json
 https://epg.iptvx.one/api/id/eroluxe-gays.json
-https://epg.iptvx.one/api/id/zal-12-tricolor.json
-https://epg.iptvx.one/api/id/zal-11-tricolor.json
-https://epg.iptvx.one/api/id/zal-10-tricolor.json
-https://epg.iptvx.one/api/id/zal-9-tricolor.json
-https://epg.iptvx.one/api/id/zal-8-tricolor.json
-https://epg.iptvx.one/api/id/zal-7-tricolor.json
-https://epg.iptvx.one/api/id/zal-6-tricolor.json
-https://epg.iptvx.one/api/id/zal-5-tricolor.json
-https://epg.iptvx.one/api/id/zal-4-tricolor.json
-https://epg.iptvx.one/api/id/zal-3-tricolor.json
-https://epg.iptvx.one/api/id/zal-2-tricolor.json
-https://epg.iptvx.one/api/id/zal-1-tricolor.json
