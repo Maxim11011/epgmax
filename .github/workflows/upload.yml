@@ -17,5 +17,5 @@ jobs:
       uses: intersecato/dropbox-upload@1.0.0
       with:
         DROPBOX_ACCESS_TOKEN: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
-        DROPBOX_DESTINATION_PATH_PREFIX: "epg/"
+        DROPBOX_DESTINATION_PATH_PREFIX: "https://www.dropbox.com/scl/fo/zjh4into01vanlricunff/AD7_WJE94icjfSj-uCanm64?rlkey=40y476qi2k0rex5ysuyo8wv5q&st=zyy71dsn&dl=0"
         GLOB: "epg.xml.gz"
