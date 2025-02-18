@@ -1,0 +1,21 @@
+name: Upload to Dropbox
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  upload_to_dropbox:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Upload file to Dropbox
+      uses: svenstaro/upload-release-action@v0.1.0
+      with:
+        file: epg.xml.gz
+        dropbox_token: ${{ secrets.DROPBOX_ACCESS_TOKEN }}
+        target: /epg/epg.xml.gz
