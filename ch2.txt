@@ -6,3 +6,4 @@ https://epg.iptvx.one/api/id/sony-turbo-baltic.json
 https://epg.iptvx.one/api/id/filmzone-ee.json
 https://epg.iptvx.one/api/id/eroluxe-gays.json
 https://epg.iptvx.one/api/id/init-tv.json
+https://epg.iptvx.one/api/id/duo7ee.json
