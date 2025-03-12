@@ -42,7 +42,7 @@ jobs:
       - name: Update date and time
         run: |
            DATE=$(date -u +"%a, %d %b %Y %H:%M:%S GMT")
-           sed -i "s/last-modified: .*/last-modified: $(DATE)/" _headers
+           sed -i "s/last-modified: .*/last-modified: ${DATE}/" _headers
 
       - name: Commit and push changes
         run: |
