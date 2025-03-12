@@ -39,10 +39,15 @@ jobs:
       - name: Archive epg.xml
         run: gzip -f epg.xml
 
+      - name: Update date and time
+        run: |
+           current_date_time=$(date +"%Y-%m-%d %H:%M:%S")
+           sed -i "s/last-modified: .*/last-modified: ${current_date_time}/" _headers
+
       - name: Commit and push changes
         run: |
          git config user.name github-actions
          git config user.email github-actions 
-         git add epg.xml.gz
-         git commit -m "Convert JSON to XMLTV and archive"
+         git add epg.xml.gz _headers
+         git commit -m "Create epg archive and create headers last-modified"
          git push
