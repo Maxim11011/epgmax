@@ -41,8 +41,7 @@ jobs:
 
       - name: Update date and time
         run: |
-           current_date_time=$(date +"%Y-%m-%d %H:%M:%S")
-           sed -i "s/last-modified: .*/last-modified: ${current_date_time} GMT/" _headers
+           sed -i "s/last-modified: .*/last-modified: $(date)/" _headers
 
       - name: Commit and push changes
         run: |
