@@ -44,7 +44,7 @@ jobs:
 
       - name: Download File
         env:
-          FILE_URL: ${{ secrets.FILE_URL }} # The secret containing the HTTP link
+          FILE_URL: ${{ secrets.FILE_URL }} # The secret containing the HTTP link app/pdownload.php?file=
         run: curl -o crepg.xml.gz $FILE_URL
 
       - name: Update date and time
