@@ -10,7 +10,7 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: '52 6,12,18 * * *'  # Запуск 6:52, 12:52, 18:52 GMT
+    - cron: '53 6,12,18 * * *'  # Запуск 6:53, 12:53, 18:53 GMT
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -42,10 +42,15 @@ jobs:
       - name: Setup curl
         run: sudo apt-get install -y curl
 
-      - name: Download File
+      - name: Download File from Crazy
         env:
           FILE_URL: ${{ secrets.FILE_URL }} # The secret containing the HTTP link app/pdownload.php?file=
         run: curl -o crepg.xml.gz $FILE_URL
+
+      - name: Download File from Yo
+        env:
+          YO_URL: ${{ secrets.YO_URL }} # The secret containing the HTTP link yo-epg /xmltv/epg.xml.gz
+        run: curl -o yoepg.xml.gz $YO_URL
 
       - name: Update date and time
         run: |
@@ -56,6 +61,6 @@ jobs:
         run: |
          git config user.name github-actions
          git config user.email github-actions 
-         git add epg.xml.gz crepg.xml.gz _headers
+         git add epg.xml.gz crepg.xml.gz yoepg.xml.gz _headers
          git commit -m "Create epg archive and create headers last-modified"
          git push
