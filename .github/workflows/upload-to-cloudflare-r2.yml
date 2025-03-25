@@ -6,14 +6,14 @@ on:
       - main
 
 jobs:
-  download_upload:
+  download-and-upload:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-     - name: Download File from Yo
+      - name: Download File from Yo
         env:
           YO_URL: ${{ secrets.YO_URL }} # The secret containing the HTTP link yo-epg /xmltv/epg.xml.gz
         run: curl -o yoepg.xml.gz $YO_URL
