@@ -16,7 +16,7 @@ jobs:
     - name: Download File from Yo
       env:
         YO_URL: ${{ secrets.YO_URL }} # The secret containing the HTTP link yo-epg /xmltv/epg.xml.gz
-        run: curl -o yoepg.xml.gz $YO_URL
+      run: curl -o yoepg.xml.gz $YO_URL
 
     - name: Configure AWS CLI for Cloudflare R2
       run: |
