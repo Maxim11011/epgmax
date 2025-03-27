@@ -45,7 +45,16 @@ jobs:
       - name: Download File from Crazy
         env:
           FILE_URL: ${{ secrets.FILE_URL }} # The secret containing the HTTP link app/pdownload.php?file=
-        run: curl -o crepg.xml.gz $FILE_URL
+ 
+      - name: Upload crepg.xml.gz to Cloudflare R2
+        uses: cloudflare/r2-upload-action@v1
+        with:
+          account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          access-key-id: ${{ secrets.CLOUDFLARE_ACCESS_KEY_ID }}
+          secret-access-key: ${{ secrets.CLOUDFLARE_SECRET_ACCESS_KEY }}
+          bucket-name: ${{ secrets.CLOUDFLARE_BUCKET_NAME }}
+          file-path: crepg.xml.gz
+          destination-path: crepg.xml.gz       run: curl -o crepg.xml.gz $FILE_URL
 
       - name: Update date and time
         run: |
