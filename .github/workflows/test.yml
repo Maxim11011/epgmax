@@ -23,7 +23,6 @@ jobs:
         aws configure set aws_access_key_id ${{ secrets.CLOUDFLARE_ACCESS_KEY_ID }}
         aws configure set aws_secret_access_key ${{ secrets.CLOUDFLARE_SECRET_ACCESS_KEY }}
         aws configure set region auto
-        aws configure set output json
 
     - name: Upload file to Cloudflare R2
       run: |
