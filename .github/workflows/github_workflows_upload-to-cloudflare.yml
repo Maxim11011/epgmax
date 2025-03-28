@@ -13,22 +13,12 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Upload epg.xml.gz to Cloudflare R2
-      uses: cloudflare/r2-upload-action@v1
-      with:
-        account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        access-key-id: ${{ secrets.CLOUDFLARE_ACCESS_KEY_ID }}
-        secret-access-key: ${{ secrets.CLOUDFLARE_SECRET_ACCESS_KEY }}
-        bucket-name: ${{ secrets.CLOUDFLARE_BUCKET_NAME }}
-        file-path: epg.xml.gz
-        destination-path: epg.xml.gz
-
     - name: Upload crepg.xml.gz to Cloudflare R2
-      uses: cloudflare/r2-upload-action@v1
+      uses: randomairborne/r2-release@main
       with:
-        account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        access-key-id: ${{ secrets.CLOUDFLARE_ACCESS_KEY_ID }}
-        secret-access-key: ${{ secrets.CLOUDFLARE_SECRET_ACCESS_KEY }}
-        bucket-name: ${{ secrets.CLOUDFLARE_BUCKET_NAME }}
-        file-path: crepg.xml.gz
-        destination-path: crepg.xml.gz
+        endpoint: https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
+        accesskeyid: ${{ secrets.CLOUDFLARE_ACCESS_KEY_ID }}
+        secretaccesskey: ${{ secrets.CLOUDFLARE_SECRET_ACCESS_KEY }}
+        bucket: ${{ secrets.CLOUDFLARE_BUCKET_NAME }}
+        file: 'crepg.xml.gz'
+        destination: 'crepg.xml.gz'
