@@ -1,4 +1,4 @@
-name: Upload Files to Cloudflare
+name: Upload File to R2
 
 on:
   push:
@@ -11,14 +11,22 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
-    - name: Upload crepg.xml.gz to Cloudflare R2
-      uses: randomairborne/r2-release@main
-      with:
-        endpoint: https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
-        accesskeyid: ${{ secrets.CLOUDFLARE_ACCESS_KEY_ID }}
-        secretaccesskey: ${{ secrets.CLOUDFLARE_SECRET_ACCESS_KEY }}
-        bucket: ${{ secrets.CLOUDFLARE_BUCKET_NAME }}
-        file: 'crepg.xml.gz'
-        destination: 'crepg.xml.gz'
+    - name: Upload to R2
+      env:
+        CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        CLOUDFLARE_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_ACCESS_KEY_ID }}
+        CLOUDFLARE_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_SECRET_ACCESS_KEY }}
+      run: |
+        # Install AWS CLI if not already installed
+        sudo apt-get update
+        sudo apt-get install -y awscli
+
+        # Configure AWS CLI to use Cloudflare R2
+        aws configure set aws_access_key_id $CLOUDFLARE_ACCESS_KEY_ID
+        aws configure set aws_secret_access_key $CLOUDFLARE_SECRET_ACCESS_KEY
+        aws configure set default.region us-east-1
+
+        # Upload the file to R2
+        aws s3 cp crepg.xml.gz s3://${{ secrets.CLOUDFLARE_BUCKET_NAME }}/crepg.xml.gz --endpoint-url=https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
