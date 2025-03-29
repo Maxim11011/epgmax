@@ -1,0 +1,28 @@
+name: Download and Upload to R2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Download File from Yo
+        env:
+          YO_URL: ${{ secrets.YO_URL }} # The secret containing the HTTP link yo-epg /xmltv/epg.xml.gz
+        run: curl -o yoepg.xml.gz $YO_URL
+
+      - name: Upload to R2
+        uses: r2-upload-action@latest
+        with:
+          r2-access-key-id: ${{ secrets.CLOUDFLARE_ACCESS_KEY_ID }}
+          r2-secret-access-key: ${{ secrets.CLOUDFLARE_SECRET_ACCESS_KEY }}
+          r2-bucket-name: epg
+          file: yoepg.xml.gz
+          destination-path: ./yoepg.xml.gz
