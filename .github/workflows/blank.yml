@@ -47,6 +47,16 @@ jobs:
           FILE_URL: ${{ secrets.FILE_URL }} # The secret containing the HTTP link app/pdownload.php?file=
         run: curl -o crepg.xml.gz $FILE_URL
 
+      - name: Upload to R2
+        uses: ryand56/r2-upload-action@v1.4
+        with:
+          r2-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          r2-access-key-id: ${{ secrets.CLOUDFLARE_ACCESS_KEY_ID }}
+          r2-secret-access-key: ${{ secrets.CLOUDFLARE_SECRET_ACCESS_KEY }}
+          r2-bucket: epg
+          source-dir: ./crepg.xml.gz
+          destination-dir: ./
+
       - name: Update date and time
         run: |
            DATE=$(date -u +"%a, %d %b %Y %H:%M:%S GMT")
