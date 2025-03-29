@@ -19,7 +19,7 @@ jobs:
         run: curl -o yoepg.xml.gz $YO_URL
 
       - name: Upload to R2
-        uses: r2-upload-action@latest
+        uses: actions/r2-upload-action@latest
         with:
           r2-access-key-id: ${{ secrets.CLOUDFLARE_ACCESS_KEY_ID }}
           r2-secret-access-key: ${{ secrets.CLOUDFLARE_SECRET_ACCESS_KEY }}
