@@ -12,3 +12,4 @@ https://epg.iptvx.one/api/id/tv3-plus-lt.json
 https://epg.iptvx.one/api/id/super-baltic.json
 https://epg.iptvx.one/api/id/5kanal-ua.json
 https://epg.iptvx.one/api/id/go3-sport4.json
+https://epg.iptvx.one/api/id/prime-fight.json
