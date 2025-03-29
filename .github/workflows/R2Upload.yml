@@ -26,4 +26,4 @@ jobs:
           r2-secret-access-key: ${{ secrets.CLOUDFLARE_SECRET_ACCESS_KEY }}
           r2-bucket: epg
           source-dir: ./yoepg.xml.gz
-          destination-dir: ./yoepg.xml.gz
+          destination-dir: ./
