@@ -10,7 +10,7 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: '58 5,12,18 * * *'  # Запуск 5:59, 12:59, 18:59 GMT
+    - cron: '56 5,12,18 * * *'  # Запуск 5:56, 12:56, 18:56 GMT
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
