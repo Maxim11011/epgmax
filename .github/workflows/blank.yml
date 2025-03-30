@@ -10,7 +10,7 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: '56 5,12,18 * * *'  # Запуск 5:56, 12:56, 18:56 GMT
+    - cron: '55 5,12,18 * * *'  # Запуск 5:55, 12:55, 18:55 GMT
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -38,6 +38,16 @@ jobs:
 
       - name: Archive epg.xml
         run: gzip -f epg.xml
+
+      - name: Upload maxepg to R2
+        uses: ryand56/r2-upload-action@v1.4
+        with:
+          r2-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          r2-access-key-id: ${{ secrets.CLOUDFLARE_ACCESS_KEY_ID }}
+          r2-secret-access-key: ${{ secrets.CLOUDFLARE_SECRET_ACCESS_KEY }}
+          r2-bucket: epg
+          source-dir: ./epg.xml.gz
+          destination-dir: ./
         
       - name: Setup curl
         run: sudo apt-get install -y curl
@@ -47,7 +57,7 @@ jobs:
           FILE_URL: ${{ secrets.FILE_URL }} # The secret containing the HTTP link app/pdownload.php?file=
         run: curl -o crepg.xml.gz $FILE_URL
 
-      - name: Upload to R2
+      - name: Upload crepg to R2
         uses: ryand56/r2-upload-action@v1.4
         with:
           r2-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -57,15 +67,9 @@ jobs:
           source-dir: ./crepg.xml.gz
           destination-dir: ./
 
-      - name: Update date and time
-        run: |
-           DATE=$(date -u +"%a, %d %b %Y %H:%M:%S GMT")
-           sed -i "s/last-modified: .*/last-modified: ${DATE}/" _headers
-
       - name: Commit and push changes
         run: |
          git config user.name github-actions
          git config user.email github-actions 
-         git add epg.xml.gz _headers
-         git commit -m "Create epg archive and create headers last-modified"
+         git commit -m "Create maxepg archive and upload to R2"
          git push
