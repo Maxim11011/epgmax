@@ -66,10 +66,3 @@ jobs:
           r2-bucket: epg
           source-dir: ./crepg.xml.gz
           destination-dir: ./
-
-      - name: Commit and push changes
-        run: |
-         git config user.name github-actions
-         git config user.email github-actions
-         git commit -a -m "Create maxepg archive and upload to R2"
-         git push
