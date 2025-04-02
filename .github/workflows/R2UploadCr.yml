@@ -1,0 +1,28 @@
+name: Crepg to R2
+
+on:
+  schedule:
+    - cron: '56 5,11,17 * * *'  # Запуск 5:56, 11:56, 17:56 GMT
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Download File from Crazy
+        env:
+          FILE_URL: ${{ secrets.FILE_URL }} # The secret containing the HTTP link app/download.php?file=
+        run: curl -o crepg.xml.gz $FILE_URL
+
+      - name: Upload crepg to R2
+        uses: ryand56/r2-upload-action@v1.4
+        with:
+          r2-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          r2-access-key-id: ${{ secrets.CLOUDFLARE_ACCESS_KEY_ID }}
+          r2-secret-access-key: ${{ secrets.CLOUDFLARE_SECRET_ACCESS_KEY }}
+          r2-bucket: epg
+          source-dir: ./crepg.xml.gz
+          destination-dir: ./
