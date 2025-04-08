@@ -1,7 +1,6 @@
 #!/bin/bash
 rm *.json
-wget --no-check-certificate --no-cache --no-cookies --limit-rate=200k -i ch2.txt
-wget -c --no-check-certificate --no-cache --no-cookies --limit-rate=200k -i ch2.txt
+wget --no-check-certificate --header="Accept: application/json" -i ch2.txt
 if [ -e channels.xml ]; then
 	echo "File for channels exists, skeeping...";
 else 
