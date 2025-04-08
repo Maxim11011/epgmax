@@ -15,7 +15,7 @@ jobs:
       - name: Download File from Crazy
         env:
           FILE_URL: ${{ secrets.FILE_URL }} # The secret containing the HTTP link app/download.php?file=
-        run: curl -o crepg.xml.gz $FILE_URL
+        run: wget -o crepg.xml.gz $FILE_URL
 
       - name: Upload crepg to R2
         uses: ryand56/r2-upload-action@v1.4
