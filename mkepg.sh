@@ -1,6 +1,6 @@
 #!/bin/bash
 rm *.json
-wget -d --no-check-certificate --limit-rate=200k --header="Accept-Encoding: gzip" -i ch2.txt
+wget -d --no-check-certificate --limit-rate=200k -i ch2.txt
 if [ -e channels.xml ]; then
 	echo "File for channels exists, skeeping...";
 else 
