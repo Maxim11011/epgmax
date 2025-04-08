@@ -1,6 +1,6 @@
 #!/bin/bash
 rm *.json
-wget --no-check-certificate --limit-rate=200k --timeout=2 -i ch2.txt
+wget --no-check-certificate --limit-rate=200k --header="Content-length:1048576" -i ch2.txt
 if [ -e channels.xml ]; then
 	echo "File for channels exists, skeeping...";
 else 
