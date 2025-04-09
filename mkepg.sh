@@ -1,8 +1,12 @@
 #!/bin/bash
 rm *.json
-wget -d --no-check-certificate --header="Accept: application/json" --limit-rate=50k -i ch2.txt
+wget -d --no-check-certificate --header="Accept: application/json" --header="Accept-Encoding: gzip" --limit-rate=50k -i ch2.txt -O temp.gz
+
+# Decompress the downloaded gzip file
+gunzip -f temp.gz
+
 if [ -e channels.xml ]; then
-	echo "File for channels exists, skeeping...";
+	echo "File for channels exists, skipping...";
 else 
 	echo "File for channels does not exist, creating...";
 for f in ./*.json; do 
@@ -24,4 +28,3 @@ echo '<tv generator-info-name="Vladimir">' >> epg.xml
 cat channels.xml >> epg.xml
 cat prog.xml >> epg.xml
 echo '</tv>' >> epg.xml
-
