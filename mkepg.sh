@@ -1,12 +1,8 @@
 #!/bin/bash
 rm *.json
-wget -d --no-check-certificate --header="Accept: application/json" --header="Accept-Encoding: gzip" --limit-rate=50k -i ch2.txt -O temp.gz
-
-# Decompress the downloaded gzip file
-gunzip -f temp.gz
-
+wget -d --no-check-certificate --header="Accept: application/json" --limit-rate=50k -i ch2.txt
 if [ -e channels.xml ]; then
-	echo "File for channels exists, skipping...";
+	echo "File for channels exists, skeeping...";
 else 
 	echo "File for channels does not exist, creating...";
 for f in ./*.json; do 
