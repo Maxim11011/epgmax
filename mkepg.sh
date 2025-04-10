@@ -1,6 +1,6 @@
 #!/bin/bash
 rm *.json
-wget -d --no-check-certificate --header="Accept-encoding: gzip" --limit-rate=50k -i ch2.txt
+wget -d --no-check-certificate --header="Accept-encoding: gzip" --limit-rate=200k -i ch2.txt
 for f in *json; do
    mv -- "$f" "${f%}.json.gz"
 done
