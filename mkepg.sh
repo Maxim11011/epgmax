@@ -1,12 +1,12 @@
 #!/bin/bash
 rm *.json
 wget -d --no-check-certificate --header="Accept-encoding: gzip" --limit-rate=50k -i ch2.txt
-for f in *.json; do
-   mv -- "$f" "${f%.json}.gz"
+for f in *json; do
+   mv -- "$f" "${f%}.json.gz"
 done
 # Decompresses all .gz files in the current directory
 for file in *.gz; do
-  gunzip "$file"  # Decompresses each .gz file found
+  gunzip -f "$file"  # Decompresses each .gz file found
 done
 if [ -e channels.xml ]; then
 	echo "File for channels exists, skeeping...";
