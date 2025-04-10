@@ -1,6 +1,6 @@
 #!/bin/bash
 rm *.json
-wget -d --no-check-certificate --header="Accept-encoding: gzip" --limit-rate=200k -i ch2.txt
+wget --no-check-certificate --header="Accept-encoding: gzip" -i ch2.txt
 
 # Change all .json files to .json.gz
 for file in *.json; do
