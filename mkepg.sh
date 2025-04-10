@@ -1,7 +1,7 @@
 #!/bin/bash
 rm *.json
 wget -d --no-check-certificate --header="Accept-encoding: gzip" --limit-rate=50k -i ch2.txt
-mv "*.json" "*.gjson.gz"
+mv *.json *.gjson.gz
 gunzip -f -v "*.gjson.gz"
 if [ -e channels.xml ]; then
 	echo "File for channels exists, skeeping...";
