@@ -1,5 +1,4 @@
 #!/bin/bash
-rm *.json
 wget --no-check-certificate --header="Accept-encoding: gzip" -i ch2.txt
 
 # Change all .json files to .json.gz
