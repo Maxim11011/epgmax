@@ -2,7 +2,7 @@ name: Yoepg to R2
 
 on:
   schedule:
-    - cron: '53 5,11,17 * * *'  # Запуск 5:53, 11:53, 17:53 GMT
+    - cron: '56 5,11,17 * * *'  # Запуск 5:56, 11:56, 17:56 GMT
 
 jobs:
   upload:
