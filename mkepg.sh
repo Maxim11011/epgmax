@@ -1,7 +1,7 @@
 #!/bin/bash
 wget --no-check-certificate --header="Accept-encoding: gzip" -i ch2.txt
 
-# Change all .json files to .json.gz
+# Rename all .json files to .json.gz
 for file in *.json; do
     if [ -f "$file" ]; then
         mv "$file" "${file%.json}.json.gz"
