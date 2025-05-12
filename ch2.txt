@@ -11,6 +11,7 @@ https://epg.iptvx.one/api/id/otv-lv.json
 https://epg.iptvx.one/api/id/prime-fight.json
 https://epg.iptvx.one/api/id/sony-turbo-baltic.json
 https://epg.iptvx.one/api/id/super-baltic.json
+https://epg.iptvx.one/api/id/tv-extra.json
 https://epg.iptvx.one/api/id/tv3-by.json
 https://epg.iptvx.one/api/id/tv3-plus-lt.json
 https://epg.iptvx.one/api/id/yo.json
