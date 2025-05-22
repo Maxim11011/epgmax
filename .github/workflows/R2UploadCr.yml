@@ -2,7 +2,7 @@ name: Crepg to R2
 
 on:
   schedule:
-    - cron: '59 3,11,17 * * *'  # Запуск 3:57, 11:57, 17:57 GMT
+    - cron: '01 4,12,18 * * *'  # Запуск 4:01, 12:01, 18:01 GMT
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 jobs:
