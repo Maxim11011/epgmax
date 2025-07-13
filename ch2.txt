@@ -10,6 +10,7 @@ https://epg.iptvx.one/api/id/novy-mir.json
 https://epg.iptvx.one/api/id/otv-lv.json
 https://epg.iptvx.one/api/id/prime-fight.json
 https://epg.iptvx.one/api/id/rossia1-pl1.json
+https://epg.iptvx.one/api/id/rossia1-pl9.json
 https://epg.iptvx.one/api/id/sony-enter.json
 https://epg.iptvx.one/api/id/sony-turbo-baltic.json
 https://epg.iptvx.one/api/id/super-baltic.json
