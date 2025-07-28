@@ -14,6 +14,7 @@ https://epg.iptvx.one/api/id/rossia1-pl3.json
 https://epg.iptvx.one/api/id/rossia1-pl5.json
 https://epg.iptvx.one/api/id/rossia1-pl6.json
 https://epg.iptvx.one/api/id/rossia1-pl7.json
+https://epg.iptvx.one/api/id/rossia1-pl8.json
 https://epg.iptvx.one/api/id/rossia1-pl9.json
 https://epg.iptvx.one/api/id/sony-enter.json
 https://epg.iptvx.one/api/id/sony-turbo-baltic.json
