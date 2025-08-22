@@ -2,7 +2,7 @@ name: Yoepg to R2
 
 on:
   schedule:
-    - cron: '58 3,11,18 * * *'  # Запуск 3:58, 11:58, 18:58 GMT
+    - cron: '59 3,12,18 * * *'  # Запуск 3:59, 11:59, 18:58 GMT
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
   
