@@ -7,7 +7,6 @@ https://epg.iptvx.one/api/id/go3-sport4.json
 https://epg.iptvx.one/api/id/horrortv.json
 https://epg.iptvx.one/api/id/init-tv.json
 https://epg.iptvx.one/api/id/liuks.json
-https://epg.iptvx.one/api/id/novy-mir.json
 https://epg.iptvx.one/api/id/otv-lv.json
 https://epg.iptvx.one/api/id/prime-fight.json
 https://epg.iptvx.one/api/id/rossia1-pl1.json
