@@ -8,7 +8,7 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: '59 6,13,17 * * *'  # Запуск 6:59, 13:59, 17:59 GMT
+    - cron: '40 7,14,18 * * *'  # Запуск 7:40, 14:40, 18:40 GMT
     - cron: '10 16 * * 0,6'  # Запуск 16:10 GMT по воскресеньям(0) и субботам(6)
 
   # Allows you to run this workflow manually from the Actions tab
