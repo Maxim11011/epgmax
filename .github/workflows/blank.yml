@@ -9,7 +9,7 @@ on:
     branches: [ "main" ]
   schedule:
     - cron: '57 7,14,18 * * *'  # Запуск 7:57, 14:57, 18:57 GMT
-    - cron: '10 16 * * 0,6'  # Запуск 16:10 GMT по воскресеньям(0) и субботам(6)
+  # - cron: '10 16 * * 0,6'  # Запуск 16:10 GMT по воскресеньям(0) и субботам(6)
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
