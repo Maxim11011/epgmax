@@ -20,7 +20,6 @@ https://epg.iptvx.one/api/id/sony-enter.json
 https://epg.iptvx.one/api/id/sony-turbo-baltic.json
 https://epg.iptvx.one/api/id/super-baltic.json
 https://epg.iptvx.one/api/id/tnt-bravo-moldova.json
-https://epg.iptvx.one/api/id/tv-extra.json
 https://epg.iptvx.one/api/id/tv3-by.json
 https://epg.iptvx.one/api/id/tv3-lt.json
 https://epg.iptvx.one/api/id/tv3-plus-lt.json
