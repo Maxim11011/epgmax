@@ -1,3 +1,4 @@
+https://epg.iptvx.one/api/id/1-2.json
 https://epg.iptvx.one/api/id/5kanal-ua.json
 https://epg.iptvx.one/api/id/duo7ee.json
 https://epg.iptvx.one/api/id/filmzone-ee.json
