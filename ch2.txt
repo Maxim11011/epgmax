@@ -23,7 +23,5 @@ https://epg.iptvx.one/api/id/super-baltic.json
 https://epg.iptvx.one/api/id/tnt-bravo-moldova.json
 https://epg.iptvx.one/api/id/tv3-by.json
 https://epg.iptvx.one/api/id/tv3-lt.json
-https://epg.iptvx.one/api/id/tv3-plus-lt.json
 https://epg.iptvx.one/api/id/tv6-lt.json
 https://epg.iptvx.one/api/id/tv8-lt.json
-https://epg.iptvx.one/api/id/yo.json
