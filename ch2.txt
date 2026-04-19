@@ -9,6 +9,10 @@ https://epg.iptvx.one/api/id/liuks.json
 https://epg.iptvx.one/api/id/mooz-dance-ro.json
 https://epg.iptvx.one/api/id/ntv-belarus.json
 https://epg.iptvx.one/api/id/otv-lv.json
+https://epg.iptvx.one/api/id/pink-ero-1-rs.json
+https://epg.iptvx.one/api/id/pink-ero-2-rs.json
+https://epg.iptvx.one/api/id/pink-ero-3-rs.json
+https://epg.iptvx.one/api/id/pink-ero-4-rs.json
 https://epg.iptvx.one/api/id/rossia1-pl1.json
 https://epg.iptvx.one/api/id/rossia1-pl3.json
 https://epg.iptvx.one/api/id/rossia1-pl5.json
