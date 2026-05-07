@@ -10,6 +10,7 @@ https://epg.iptvx.one/api/id/liuks.json
 https://epg.iptvx.one/api/id/mooz-dance-ro.json
 https://epg.iptvx.one/api/id/ntv-belarus.json
 https://epg.iptvx.one/api/id/otv-lv.json
+https://epg.iptvx.one/api/id/pervy-gorodskoy-kryvrig.json
 https://epg.iptvx.one/api/id/pink-ero-1-rs.json
 https://epg.iptvx.one/api/id/pink-ero-2-rs.json
 https://epg.iptvx.one/api/id/pink-ero-3-rs.json
