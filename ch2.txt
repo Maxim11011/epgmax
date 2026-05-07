@@ -16,6 +16,7 @@ https://epg.iptvx.one/api/id/pink-ero-1-rs.json
 https://epg.iptvx.one/api/id/pink-ero-2-rs.json
 https://epg.iptvx.one/api/id/pink-ero-3-rs.json
 https://epg.iptvx.one/api/id/pink-ero-4-rs.json
+https://epg.iptvx.one/api/id/fauna.json
 https://epg.iptvx.one/api/id/rossia1-pl1.json
 https://epg.iptvx.one/api/id/rossia1-pl3.json
 https://epg.iptvx.one/api/id/rossia1-pl5.json
