@@ -7,7 +7,7 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: '00 6,12,18 * * *'  # run 6:00, 12:00, 18:00 GMT every day of week
+    - cron: '00 5,12,18 * * *'  # run 6:00, 12:00, 18:00 GMT every day of week
     - cron: '00 10 * * 1'  # run 10:00 GMT on Mondays only(1)
     - cron: '40 16 * * 0'  # run 16:40 GMT on Sundays only(0)
 
@@ -24,7 +24,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       # Runs a single command using the runners shell
       - name: Setup jq
