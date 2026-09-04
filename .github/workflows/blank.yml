@@ -7,9 +7,9 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: '11 5,13,18 * * *'  # run 5:10, 13:10, 18:10 GMT every day of week
+    - cron: '11 4,12,17 * * *'  # run 4:10, 12:10, 17:10 GMT every day of week
     - cron: '00 10 * * 1'  # run 10:00 GMT on Mondays only(1)
-    - cron: '40 16 * * 0'  # run 16:40 GMT on Sundays only(0)
+   # - cron: '40 16 * * 0'  # run 16:40 GMT on Sundays only(0)
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
