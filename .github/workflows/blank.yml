@@ -7,7 +7,7 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: '11 3,11,17 * * *'  # run 3:10, 11:10, 17:10 GMT every day of week
+    - cron: '11 2,10,16 * * *'  # run 3:10, 11:10, 17:10 GMT every day of week
     - cron: '03 9 * * 1'  # run 9:03 GMT on Mondays only(1)
    # - cron: '40 16 * * 0'  # run 16:40 GMT on Sundays only(0)
 
